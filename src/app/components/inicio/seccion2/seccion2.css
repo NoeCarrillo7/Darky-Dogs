@@ -1,0 +1,109 @@
+.container{
+    color: white;
+    display: flex;
+    padding-top: 50px;
+    width: 100%;
+}
+
+.content-s1{
+    width: 27%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-s1 h4{
+    color: #EF054A;
+    font-size: 40px;
+    letter-spacing: 2px;
+    display: inline-block;
+    transform: rotate(-5deg);
+}
+.content-s1 span{
+    color: #ffffff;
+    font-size: 80px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    display: inline-block;
+    transform: rotate(-5deg);
+}
+
+.btn-menu{
+    width: 60%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 50px;
+    background-color: #EF054A;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.btn-uber{
+    width: 60%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 50px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+
+.content-s2{
+    width: 28%;
+}
+.content-s2 img{
+    width: 90%;
+}
+
+
+
+.content-s3{
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+.content-s3 h4{
+    color: #EF054A;
+    font-size: 30px;
+    letter-spacing: 2px;
+    display: inline-block;
+    transform: rotate(-5deg);
+    margin-bottom: 20px;
+}
+.content-s3 h1{
+    color: #ffffff;
+    font-size: 80px;
+    letter-spacing: 2px;
+    padding: 0;
+    font-weight: 700;
+    transform: rotate(-5deg);
+    margin: 0;
+    padding: 0;
+    line-height: 0.9; 
+    display: inline-block
+}
+.elemento2{
+    width: 60%;
+    z-index: 1;
+}
+.elemento3{
+    transform: rotate(20deg);
+    width: 23%;
+    position: absolute;
+    top: 140%;
+}
