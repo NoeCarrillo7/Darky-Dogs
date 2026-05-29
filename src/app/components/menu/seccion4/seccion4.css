@@ -1,0 +1,62 @@
+.extras{
+    background:
+    linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),
+    url('/assets/menu/amarillo.png');
+
+    background-size: cover;
+
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.titulo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.titulo img{
+    width: 250px;
+}
+
+.titulo h2{
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.fila,
+.bebidas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.churro{
+    width: 220px;
+}
+
+.bebidas img{
+    width: 140px;
+}
+
+h3,p{
+    color: white;
+}
+
+span{
+    color: #ff0055;
+}
+
+h4{
+    color: #ffb300;
+}
+
+.bebidas div{
+    text-align: center;
+}

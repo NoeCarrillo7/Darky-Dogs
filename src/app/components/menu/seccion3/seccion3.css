@@ -1,0 +1,119 @@
+
+/* EXTRAS SECTION */
+.extras{
+    padding: 30px 16px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.extras-title{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 28px;
+}
+
+.extras-title img{
+    width: auto;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    z-index: 2;
+}
+
+.extras-title span{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 0.35em;
+    font-size: 2.5rem;
+    z-index: 3;
+}
+
+.fries-subname{
+    display: block;
+    margin-top: 2px;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #FEC568;
+}
+
+.fries-grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    gap: 26px;
+    justify-items: center;
+}
+
+.fries-card{
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.fries-img{
+    position: relative;
+    width: 100%;
+}
+
+.fries-img img{
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    max-height: 220px;
+    object-fit: cover;
+}
+
+.fries-precio{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+}
+
+.fries-nombre{
+    display: block;
+    margin: 10px 0 4px;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #FEC568;
+}
+
+.fries-desc{
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #d7d7d7;
+    padding: 0 4px;
+}
+
+.divider{
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin: 18px 0 0;
+    border-bottom: 4px dashed #FEC568;
+}

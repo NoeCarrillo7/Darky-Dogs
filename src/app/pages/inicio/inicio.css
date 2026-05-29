@@ -3,7 +3,7 @@
         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
         url('/assets/fondos/fondo-inicio.png');
     background-size: 100% auto;
-    min-height: 150vw;
+    min-height: 10vw;
 }
 
 .content-banner{

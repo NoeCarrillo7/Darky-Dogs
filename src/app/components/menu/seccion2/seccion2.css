@@ -1,0 +1,70 @@
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    padding: 20px 0 40px;
+    justify-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.card {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.img {
+    position: relative;
+    width: 80%;
+}
+
+.img img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+}
+
+.precio {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+}
+
+.nombre {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.desc {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #d7d7d7;
+    padding: 0 60px;
+}
+
+.divider{
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin: 18px 0 0;
+    border-bottom: 4px dashed #FEC568;
+}
