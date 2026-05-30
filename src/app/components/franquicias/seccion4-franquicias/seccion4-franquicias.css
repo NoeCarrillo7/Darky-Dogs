@@ -1,0 +1,48 @@
+.container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 50px 0;
+}
+
+h1{
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.container h1 span{
+    color: #EF054A;
+}
+
+p{
+    width: 60%;
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.container-icons{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+.icon{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.icon img{
+    width: 30%;
+}
+.icon span{
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}

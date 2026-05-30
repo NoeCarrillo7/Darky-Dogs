@@ -1,0 +1,51 @@
+.container{
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content1{
+    width: 60%;
+}
+.content2{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 8%;
+}
+.content2 h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 0.95;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.content2 h1 span {
+    color: #EF054A;
+}
+
+.content2 img{
+    width: 100%;
+}
+.content2 p{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+.content2 p span{
+    color: #FEC568;
+}

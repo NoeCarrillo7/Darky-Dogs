@@ -1,0 +1,60 @@
+.container{
+    background-image: url('/assets/franquicias/s3-fondo.png');
+    background-size: 100% auto;
+    padding: 50px 0;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+.left{
+    width: 30%;
+    border: 2px solid #EF054A;
+    padding: 2%;
+    border-radius: 10px;
+}
+.left h1{
+    color: black;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: center;
+}
+.left h1 span{
+    color: #EF054A;
+}
+.left p{
+    color: black;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.container-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 80%;
+    padding: 2%;
+}
+.icon span{
+    color: black;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+
+
+
