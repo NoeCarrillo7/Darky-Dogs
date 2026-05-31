@@ -8,7 +8,7 @@ import { Footer } from '../../shared/footer/footer';
 
 @Component({
   selector: 'app-inicio',
-  imports: [NavBar, Seccion2, Seccion3, Seccion4, Seccion5, Footer],
+  imports: [NavBar, Seccion2, Seccion4, Seccion5, Footer],
   templateUrl: './inicio.html',
   styleUrl: './inicio.css',
 })

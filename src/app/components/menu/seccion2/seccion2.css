@@ -46,9 +46,9 @@
 .nombre {
     display: block;
     margin: 12px 0 6px;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 800;
-    letter-spacing: 0.18em;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #FEC568;
     
@@ -56,10 +56,10 @@
 
 .desc {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #d7d7d7;
-    padding: 0 60px;
+    padding: 0 20px;
 }
 
 .divider{
@@ -107,7 +107,7 @@
         padding: 6px 10px;
     }
     .nombre {
-        font-size: 0.95rem;
+        font-size: 1.5rem;
         margin: 8px 0 4px;
     }
     .desc {

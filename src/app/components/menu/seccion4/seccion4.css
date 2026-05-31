@@ -1,153 +1,106 @@
-.extras{
+.container{
     background:
     linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),
     url('/assets/menu/amarillo.png');
-
     background-size: cover;
-
-    padding: 50px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
-.titulo{
-    position: relative;
+.left, .right{
+    width: 40%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.postre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.info{
+    width: 30%;
+}
+
+.churro img{
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 30px;
-    text-align: center;
+}
+.info h1{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.info h1 span{
+    color: #FEC568;
 }
 
-.titulo img{
-    width: 250px;
+.info p{
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
-.titulo h2{
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 3.2rem;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+.info p span{
+    color: #EF054A ;
 }
 
-.fila,
-.bebidas{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-
-.fila div,
-.bebidas div{
-    text-align: center;
+.info h2{
+    color: #FEC568;
 }
 
 .bebidas{
-    flex-wrap: wrap;
+    margin-top: 50px;
+    display: flex;
+}
+.bebidas h1{
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
-.bebidas div{
-    max-width: 260px;
+.bebidas h1 span{
+    color: #FEC568;
 }
 
-.churro{
-    width: 220px;
-}
 
-.bebidas img{
-    width: 140px;
-}
-
-h3,p{
-    color: white;
-}
-
-span{
-    color: #ff0055;
-}
-
-h4{
-    color: #ffb300;
-}
-
-.bebidas div{
-    text-align: center;
-}
-
-@media (max-width: 991px) {
-    .extras {
-        grid-template-columns: 1fr;
-        padding: 36px 24px;
-        gap: 36px;
+@media (max-width: 1200px) {
+    .container{
+        flex-direction: column;
     }
-    .titulo {
-        width: fit-content;
-        margin-bottom: 20px;
+    .left, .right{
+        width: auto;
     }
-    .titulo img {
-        width: 200px;
+}
+
+@media (max-width:500px) {
+    .container{
+        margin-bottom: 50px;
     }
-    .titulo h2 {
-        font-size: 2rem;
+    .postre{
+        flex-direction: column;
     }
-    .fila {
+    .info{
+        width: 70%;
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
     }
-    .churro {
-        width: 180px;
+    .info h1{
+        text-align: center;
     }
-    .bebidas {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+    .info p{
+        text-align: justify;
     }
-    .bebidas div {
-        width: calc(50% - 10px);
+    .bebidas{
+        flex-direction: column;
+        gap: 30px;
     }
-    .bebidas img {
-        width: 120px;
+    .bebidas h1{
+        text-align: center;
     }
-}
-
-@media (max-width: 600px) {
-    .extras {
-        padding: 24px 16px;
-        gap: 24px;
-    }
-    .titulo img {
-        width: 300px;
-    }
-    .titulo h2 {
-        font-size: 1.9rem;
-    }
-    .churro {
-        width: 250px;
-    }
-    .bebidas img {
-        width: 150px;
-    }
-    .fila div {
-        width: 100%;
-    }
-    .bebidas div {
-        width: calc(50% - 10px);
-    }
-    .fila {
-        gap: 10px;
-    }
-    .bebidas {
-        gap: 16px;
+    .img-postres, .img-bebidas{
+        width: 80%;
     }
 }

@@ -2,6 +2,7 @@
     background-image: url('/assets/franquicias/s3-fondo.png');
     background-size: 100% auto;
     padding: 50px 0;
+    background-color: white;
 }
 .content{
     display: flex;
