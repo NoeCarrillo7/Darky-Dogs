@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    padding-right: 8%;
+    margin-right: 8%;
 }
 .content2 h1 {
     font-size: 6rem;
@@ -48,4 +48,36 @@
 }
 .content2 p span{
     color: #FEC568;
+}
+
+
+
+@media (max-width: 1200px) {
+    .banner{
+        flex-direction: column;
+    }
+    .content1, .content1 img{
+        width: 100%;
+    }
+    .content2{
+        width: auto;
+        align-items: center;
+        margin: 0;
+        padding: 5%;
+    }
+    .content2 h1{
+        text-align: center;
+    }
+    .content2 p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .content2 h1{
+        font-size: 3rem;
+    }
+    .content2 p{
+        font-size: 1rem;
+    }
 }

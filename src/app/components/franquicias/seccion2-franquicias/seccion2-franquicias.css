@@ -1,6 +1,5 @@
 .container{
     width: 100%;
-    height: 500px;
     background-color: black;
     display: flex;
     align-items: center;
@@ -8,10 +7,8 @@
 }
 .content{
     width: 83%;
-    height: 500px;
     border-top: 0.8px solid #ffffff;
     display: flex;
-
 }
 
 .left{
@@ -70,4 +67,43 @@
 .right img{
     width: 90%;
     object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .content{
+        flex-direction: column;
+    }
+    .left, .right{
+        width: auto;
+        padding: 5%;
+    }
+    .left h1{
+        text-align: center;
+        align-items: center;
+    }
+    .left h1 br{
+        display: none;
+    }
+    .icon img{
+        width: 50%;
+    }
+    .right img{
+        width: 50%;
+    }
+    .right{
+        padding-top: 0;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .left h1{
+        font-size: 1.5rem;
+    }
+    .left p{
+        font-size: 1rem;
+    }
+    .icon p{
+        font-size: 0.7rem;
+    }
 }

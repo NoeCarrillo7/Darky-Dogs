@@ -58,3 +58,31 @@
 
 
 
+
+
+@media (max-width: 1200px) {
+    .content{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .left{
+        width: 60%;
+        
+    }
+}
+
+@media (max-width: 500px) {
+    .left h1{
+        font-size: 1.5rem;
+    }
+    .left p{
+        font-size: 1rem;
+    }
+    .icon span{
+        font-size: 0.7rem;
+    }
+    .left{
+        width: 75%;
+    }
+}

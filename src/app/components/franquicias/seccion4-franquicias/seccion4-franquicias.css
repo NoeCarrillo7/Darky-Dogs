@@ -46,3 +46,27 @@ p{
     letter-spacing: 2px;
     font-size: 0.8rem;
 }
+
+
+@media (max-width: 500px) {
+    .container h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .container p{
+        width: 80%;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .container-icons{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .icon{
+        width: 70%;
+    }
+    .icon span{
+        font-size: 0.6rem;
+    }
+}
