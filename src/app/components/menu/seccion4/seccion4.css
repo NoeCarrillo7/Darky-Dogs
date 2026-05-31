@@ -15,8 +15,11 @@
 .titulo{
     position: relative;
     display: flex;
+    width: 100%;
     justify-content: center;
-    margin-bottom: 30px;
+    align-items: center;
+    margin: 0 auto 30px;
+    text-align: center;
 }
 
 .titulo img{
@@ -25,8 +28,15 @@
 
 .titulo h2{
     position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    font-size: 2.5rem;
+    font-size: 3.2rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .fila,
@@ -35,6 +45,19 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+
+.fila div,
+.bebidas div{
+    text-align: center;
+}
+
+.bebidas{
+    flex-wrap: wrap;
+}
+
+.bebidas div{
+    max-width: 260px;
 }
 
 .churro{
@@ -59,4 +82,72 @@ h4{
 
 .bebidas div{
     text-align: center;
+}
+
+@media (max-width: 991px) {
+    .extras {
+        grid-template-columns: 1fr;
+        padding: 36px 24px;
+        gap: 36px;
+    }
+    .titulo {
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+    .titulo img {
+        width: 200px;
+    }
+    .titulo h2 {
+        font-size: 2rem;
+    }
+    .fila {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .churro {
+        width: 180px;
+    }
+    .bebidas {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .bebidas div {
+        width: calc(50% - 10px);
+    }
+    .bebidas img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .extras {
+        padding: 24px 16px;
+        gap: 24px;
+    }
+    .titulo img {
+        width: 300px;
+    }
+    .titulo h2 {
+        font-size: 1.9rem;
+    }
+    .churro {
+        width: 250px;
+    }
+    .bebidas img {
+        width: 150px;
+    }
+    .fila div {
+        width: 100%;
+    }
+    .bebidas div {
+        width: calc(50% - 10px);
+    }
+    .fila {
+        gap: 10px;
+    }
+    .bebidas {
+        gap: 16px;
+    }
 }

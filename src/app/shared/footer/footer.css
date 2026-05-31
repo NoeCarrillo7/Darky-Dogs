@@ -149,3 +149,79 @@
     font-size: 16px;
     font-weight: 600;
 }
+
+
+@media (max-width: 768px){
+
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-logo{
+        width: 100%;
+    }
+
+    .footer-logo img{
+        width: 140px;
+    }
+
+    .footer-links{
+        align-items: center;
+    }
+
+    .footer-links a{
+        font-size: 18px;
+    }
+
+    .footer-info,
+    .footer-contact{
+        width: 100%;
+        align-items: center;
+    }
+
+    .info-box{
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .icon{
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .info-box h3{
+        font-size: 15px;
+    }
+
+    .info-box p{
+        font-size: 14px;
+    }
+
+
+    .derechos{
+        padding: 20px 5%;
+    }
+
+    .derechos p{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .terms{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .diseño{
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+}

@@ -6,3 +6,24 @@
     align-items: center;
     padding-top: 80px;
 }
+.container img{
+    width: 70%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px){
+
+    .container img{
+        width: 85%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        filter: drop-shadow(0 0 15px rgba(255,255,255,.3));
+    }
+
+}

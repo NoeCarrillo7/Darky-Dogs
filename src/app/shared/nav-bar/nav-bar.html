@@ -10,8 +10,13 @@
     </div>
 
     <!-- LOGO -->
-    <div class="content-logo">
-        <img src="assets/logos/LogoMenu.png" alt="logo">
+    <div class="content-logo"  (click)="toggleMenu()">
+        @if(!menuOpen){
+            <img src="assets/logos/LogoMenu.png" alt="logo">
+        }
+        @if(menuOpen){
+            <span class="close-menu">✕</span>
+        }
     </div>
 
     <div class="content-options right">
@@ -23,5 +28,11 @@
             FRANQUICIAS
         </a>
     </div>
+    <div class="mobile-menu" [class.open]="menuOpen">
+    <a routerLink="/inicio" (click)="menuOpen=false">INICIO</a>
+    <a routerLink="/menu" (click)="menuOpen=false">MENÚ</a>
+    <a routerLink="/eventos" (click)="menuOpen=false">EVENTOS</a>
+    <a routerLink="/franquicias" (click)="menuOpen=false">FRANQUICIAS</a>
+</div>
 
 </div>

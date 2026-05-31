@@ -2,10 +2,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
-    padding: 20px 0 40px;
+    padding: 20px 20px 40px;
     justify-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
@@ -21,7 +21,8 @@
 
 .img {
     position: relative;
-    width: 80%;
+    width: 100%;
+    max-width: 320px;
 }
 
 .img img {
@@ -49,6 +50,8 @@
     font-weight: 800;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    color: #FEC568;
+    
 }
 
 .desc {
@@ -67,4 +70,52 @@
     width: 80%;
     margin: 18px 0 0;
     border-bottom: 4px dashed #FEC568;
+}
+
+@media (max-width: 991px) {
+    .productos {
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
+        gap: 20px;
+        padding: 20px 16px 40px;
+    }
+    .img {
+        width: 50%;
+    }
+    .nombre {
+        margin: 8px 0 4px;
+    }
+    .desc {
+        padding: 0 80px;
+        line-height: 1.45;
+    }
+}
+
+@media (max-width: 600px) {
+    .productos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 18px 12px 40px;
+    }
+    .card {
+        max-width: 100%;
+    }
+    .img {
+        max-width: 100%;
+    }
+    .precio {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+    .nombre {
+        font-size: 0.95rem;
+        margin: 8px 0 4px;
+    }
+    .desc {
+        padding: 0 px;
+        font-size: 0.92rem;
+        line-height: 1.4;
+    }
+    .divider {
+        width: 90%;
+    }
 }

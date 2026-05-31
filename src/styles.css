@@ -3,6 +3,16 @@
     margin: 0;
     padding: 0;
 }
+html,
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+app-root{
+    display: block;
+    width: 100%;
+}
 /* Regular / Book (Peso 400) - Para texto general */
 @font-face {
   font-family: 'Grota Sans';
@@ -46,4 +56,5 @@ body {
   font-family: 'Grota Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #000; /* Lo puse por que si le bajabas o movias el fondo de veia blanco  */
 }
