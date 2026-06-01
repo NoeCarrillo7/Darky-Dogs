@@ -22,13 +22,14 @@
 }
 
 .hero-title img{
-    width: 700px;
-    max-width: 80%;
-
+    width: 75%;
     object-fit: contain;
 }
 
 @media (max-width: 768px){
+    .hero{
+        padding: 0;
+    }
 
     .hero-title{
         width: 100%;

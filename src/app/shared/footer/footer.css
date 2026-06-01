@@ -146,8 +146,19 @@
 }
 
 .diseño{
-    font-size: 16px;
-    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    padding: 2%;
+}
+.diseño img{
+    margin-left: 10px;
+}
+.diseño h1{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 3px;
 }
 
 
