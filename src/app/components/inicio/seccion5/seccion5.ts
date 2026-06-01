@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-seccion5',
@@ -6,6 +6,28 @@ import { Component } from '@angular/core';
   templateUrl: './seccion5.html',
   styleUrl: './seccion5.css',
 })
-export class Seccion5 {
+export class Seccion5 implements AfterViewInit {
+constructor() {}
 
+  ngAfterViewInit(): void {
+    const elementos = document.querySelectorAll('.hidden');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const target = entry.target as HTMLElement;
+        if (entry.isIntersecting) {
+          target.classList.add('show');
+        } else {
+          target.classList.remove('show');
+        }
+      });
+    }, {
+      threshold: 0.2,
+      rootMargin: '0px 0px -10% 0px'
+    });
+
+    elementos.forEach(elemento => {
+      observer.observe(elemento);
+    });
+  }
 }
