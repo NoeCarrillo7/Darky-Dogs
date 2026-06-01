@@ -214,6 +214,10 @@ h1{
     font-weight: bold;
 }
 
+.icono-whatsapp {
+    width: 30px;
+    margin-right: 10px;
+}
 
 @media (max-width: 768px) {
     .diseno-formulario {
@@ -248,6 +252,9 @@ h1{
         text-align: center;
     } 
     .grupo-formulario input{
+        font-size: 0.8rem;
+    }
+    .grupo-formulario textarea{
         font-size: 0.8rem;
     }
     .texto-checkbox{

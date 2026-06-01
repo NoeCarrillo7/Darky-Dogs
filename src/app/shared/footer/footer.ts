@@ -8,5 +8,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './footer.css',
 })
 export class Footer {
-
+  abrirUbicacion(): void {
+    const url = `https://maps.app.goo.gl/JDpoYwDfErDcpMwS6`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+  
 }

@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './seccion5.css',
 })
 export class Seccion5 {
-
+  abrirUber(): void {
+    const url = `https://www.ubereats.com/store/darky-dogs-queretaro/EBZ8FD5tTGimpOBU88D8Zw`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
 }

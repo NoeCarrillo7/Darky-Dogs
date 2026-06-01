@@ -1,238 +1,166 @@
-.footer{
-    width: 100%;
-    background: black;
-    position: relative;
-    overflow: hidden;
-    color: white;
-    padding-top: 30px;
-}
-
-/* FONDO */
-.footer::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('/assets/footer/image.png');
-    background-size: cover;
+.container{
+    background-color: black;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), 
+        url('/assets/footer/image.png');
+    color:white;
     background-position: center;
-    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.diseño{
+    color: white;
 }
 
-.footer-overlay{
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,1),
-        rgba(0,0,0,.7)
-    );
-    z-index: 2;
-}
-
-/* CONTENIDO */
-.footer-container{
-    position: relative;
-    z-index: 3;
-    width: 90%;
-    margin: auto;
+.content{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 18px;
-    padding-bottom: 18px;
+    border-bottom: 0.5px solid #3c3c3c;
+    padding-bottom: 20px;
+}
+.logo{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 50%;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15%;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.menu a:hover{
+    color: #EF054A;
 }
 
-/* LOGO */
-.footer-logo{
-    width: 22%;
+.horario{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.footer-logo img{
-    width: 120px;
-    margin-bottom: 12px;
-}
-
-.social{
-    width: 45px;
-    height: 45px;
-    border: 1px solid white;
-    border-radius: 10px;
+.icon{
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.social:hover{
-    background: #EF054A;
-    border-color: #EF054A;
-}
-
-/* LINKS */
-.footer-links{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.footer-links a{
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: .3s;
-}
-
-.footer-links a:hover{
-    color: #EF054A;
-}
-
-/* INFO */
-.footer-info,
-.footer-contact{
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.info-box{
-    display: flex;
+    justify-content: start;
     gap: 10px;
-    max-width: 320px;
+}
+.icon img{
+    width: 20px;
+}
+.horario h3, .direccion h3{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+.horario p, .direccion p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+.direccion{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.info-direccion{
+    cursor: pointer;
 }
 
-.icon{
-    color: #EF054A;
-    font-size: 0.85cm;
-    margin-top: 3px;
-}
-
-.info-box h3{
-    font-size: 16px;
-    margin-bottom: 4px;
-}
-
-.info-box p{
-    color: #cfcfcf;
-    line-height: 1.3;
-}
-
-/* BOTTOM */
-.derechos{
-    position: relative;
-    z-index: 3;
-    border-top: 1px solid rgba(255,255,255,.1);
-    padding: 12px 20px;
-    text-align: center;
-}
-
-.derechos p{
-    margin-bottom: 8px;
-    color: #a7a7a7;
-}
-
-.terms{
-    margin-bottom: 14px;
-}
-
-.terms a{
-    color: white;
+.info-contacto {
+    display: block;
+    color: inherit;
     text-decoration: none;
-    transition: .3s;
+    cursor: pointer;
 }
 
-.terms a:hover{
-    color: #EF054A;
+.info-contacto:hover, .info-direccion:hover, .logo:hover, .diseño:hover {
+    opacity: 0.8;
+}
+.derechos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.derechos p{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 5px 0;
+    color: #dfdfdf;
+}
+.derechos a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
 .diseño{
     display: flex;
     justify-content: center;
     align-items: center;
-    color:white;
-    padding: 2%;
-}
-.diseño img{
-    margin-left: 10px;
+    gap: 20px;
+    padding: 20px 0;
+    cursor: pointer;
+    text-decoration: none;
 }
 .diseño h1{
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 3px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
-
-@media (max-width: 768px){
-
-    .footer-container{
+@media (max-width: 700px) {
+    .content{
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
+        gap: 30px;
+        padding: 5%;
     }
-
-    .footer-logo{
+    .logo, .menu, .horario, .direccion{
         width: 100%;
-    }
-
-    .footer-logo img{
-        width: 140px;
-    }
-
-    .footer-links{
-        align-items: center;
-    }
-
-    .footer-links a{
-        font-size: 18px;
-    }
-
-    .footer-info,
-    .footer-contact{
-        width: 100%;
-        align-items: center;
-    }
-
-    .info-box{
-        max-width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .icon{
-        margin-top: 0;
-        font-size: 20px;
-    }
-
-    .info-box h3{
-        font-size: 15px;
-    }
-
-    .info-box p{
-        font-size: 14px;
-    }
-
-
-    .derechos{
-        padding: 20px 5%;
-    }
-
-    .derechos p{
-        font-size: 12px;
-        line-height: 1.5;
-    }
-
-    .terms{
         display: flex;
         justify-content: center;
-        gap: 10px;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
     }
-
-    .diseño{
-        font-size: 20px;
-        margin-top: 15px;
+    .logo img{
+        width: 30%;
     }
-
+    .icon{
+        justify-content: center;
+    }
+    .derechos{
+        text-align: center;
+    }
+    .derechos p, .derechos a{
+        font-size: 0.7rem;
+    }
+    .content p{
+        font-size: 0.7rem;
+    }
+    .diseño h1{
+        font-size: 0.7rem;
+    }
 }

@@ -1,0 +1,8 @@
+.space{
+    height: 110px;
+}
+@media (max-width: 500px) {
+    .space{
+        height: 90px;
+    }
+}

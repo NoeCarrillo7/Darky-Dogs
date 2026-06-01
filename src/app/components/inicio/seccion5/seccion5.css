@@ -31,7 +31,7 @@
     justify-content: space-between;
     margin-top: 40px;
 }
-.botones button{
+.botones a{
     color: white;
     background-color: #EF054A;
     width: 40%;
@@ -47,6 +47,7 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
+    text-decoration: none;
 }
 
 .btn-uber{

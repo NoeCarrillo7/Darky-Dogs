@@ -12,6 +12,9 @@
 .content1{
     width: 60%;
 }
+.content11{
+    display: none;
+}
 .content2{
     width: 40%;
     display: flex;
@@ -79,5 +82,14 @@
     }
     .content2 p{
         font-size: 1rem;
+    }
+    .content11{
+        display: flex;
+    }
+    .content11 img{
+        width: 100%;
+    }
+    .content1{
+        display: none;
     }
 }

@@ -1,41 +1,31 @@
-<footer class="footer">
-    <div class="footer-container">
-        <!-- LOGO -->
-        <div class="footer-logo">
-            <img src="assets/logos/LogoMenu.png" alt="Darky Dogs">
-
-        </div>
-
-        <!-- LINKS -->
-        <div class="footer-links">
+<div class="container">
+    <div class="content">
+        <a class="logo" routerLink="/inicio">
+            <img src="/assets/logos/LogoMenu.png" alt="Darky Dogs">
+        </a>
+        <div class="menu">
             <a  routerLink="/inicio">Inicio</a>
             <a  routerLink="/menu">Menú</a>
             <a  routerLink="/eventos">Eventos</a>
             <a  routerLink="/franquicias">Franquicias</a>
         </div>
-
-        <!-- HORARIO -->
-        <div class="footer-info">
-            <div class="info-box">
-                <div class="icon">
-                    <i class="fa-regular fa-calendar"></i>
-                </div>
-                <div>
-                    <h3>HORARIO</h3>
-                    <p>Martes a Domingo de 13:00 a 22:00</p>
-                </div>
+        <div class="horario">
+            <div class="icon">
+                <img src="/assets/footer/icon1.png" alt="Icon Horario">
+                <h3>HORARIO</h3>
+            </div>
+            <div>
+                <p>Martes a Domingo de 13:00 a 22:00</p>
             </div>
         </div>
-
-        <!-- CONTACTO -->
-        <div class="footer-contact">
-            <div class="info-box">
+        <div class="direccion" >
+            <div class="info-direccion" (click)="abrirUbicacion()">
                 <div class="icon">
-                    <i class="fa-solid fa-location-dot"></i>
+                    <img src="/assets/footer/icon2.png" alt="Icon Dirección">
+                    <h3>DIRECCIÓN</h3>
                 </div>
 
                 <div>
-                    <h3>DIRECCIÓN</h3>
                     <p>
                         El Marqués, Anillo Vial III Ote. 230,
                         76246 Querétaro, Qro.
@@ -43,20 +33,17 @@
                 </div>
             </div>
 
-            <div class="info-box">
+            <a href="tel:+524463758196" class="info-contacto">
                 <div class="icon">
-                    <i class="fa-solid fa-phone"></i>
+                    <img src="/assets/footer/icon3.png" alt="Icon Contacto">
+                    <h3>CONTACTO</h3>
                 </div>
                 <div>
-                    <h3>CONTACTO</h3>
                     <p>Teléfono: +52 446 375 8196</p>
                 </div>
-            </div>
-
+            </a>
         </div>
-
     </div>
-
     <div class="derechos">
         <p>© 2026 Darky Dogs. Todos los derechos reservados.</p>
         <div class="terms">
@@ -64,12 +51,10 @@
             |
             <a  routerLink="/politica-de-privacidad">Política de Privacidad</a>
         </div>
-
-        
     </div>
+</div>
 
-</footer>
-<div class="diseño">
+<a class="diseño" href="https://www.horecabl.com.mx" target="_blank">
     <h1>DISEÑO Y DESARROLLO WEB</h1>
     <img src="/assets/footer/HBL.png" alt="HBL">
-</div>
+</a>

@@ -7,68 +7,64 @@
     </div>
     <div class="formulario">
         <p>Completa el formulario o contáctanos directamente vía WhatsApp.</p>
-        <form action="#" method="POST" class="formulario-franquicia">
+        <form (ngSubmit)="enviarAWhatsApp(franquiciaForm)" #franquiciaForm="ngForm" class="formulario-franquicia">
 
-            <div class="diseno-formulario">
+    <div class="diseno-formulario">
+        <div class="campos-formulario">
 
-                <div class="campos-formulario">
-
-                    <div class="fila-formulario">
-                        <div class="grupo-formulario">
-                            <label for="nombre-completo" class="solo-lectores">Nombre Completo</label>
-                            <input type="text" id="nombre-completo" name="nombre-completo" placeholder="Nombre Completo"
-                                required>
-                        </div>
-
-                        <div class="grupo-formulario">
-                            <label for="correo" class="solo-lectores">Correo electrónico</label>
-                            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
-                        </div>
-                    </div>
-
-                    <div class="fila-formulario">
-                        <div class="grupo-formulario">
-                            <label for="telefono" class="solo-lectores">Teléfono / WhatsApp</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono / WhatsApp" required>
-                        </div>
-
-                        <div class="grupo-formulario">
-                            <label for="ubicacion" class="solo-lectores">Ciudad / País</label>
-                            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ciudad / País" required>
-                        </div>
-                    </div>
-
-                    <div class="grupo-formulario ancho-completo">
-                        <label for="interes" class="solo-lectores">Cuéntanos sobre ti y tu interés en la
-                            franquicia</label>
-                        <textarea id="interes" name="interes" rows="3"
-                            placeholder="Cuéntanos sobre ti y tu interés en la franquicia" required></textarea>
-                    </div>
-
+            <div class="fila-formulario">
+                <div class="grupo-formulario">
+                    <label for="nombre-completo" class="solo-lectores">Nombre Completo</label>
+                    <input type="text" id="nombre-completo" name="nombre" ngModel placeholder="Nombre Completo" required>
                 </div>
 
-                <div class="acciones-formulario">
-                    <button type="submit" class="btn-enviar">
-                        ENVIAR INFORMACIÓN
-                        <span class="icono-flecha" aria-hidden="true">&gt;</span>
-                    </button>
+                <div class="grupo-formulario">
+                    <label for="correo" class="solo-lectores">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" ngModel placeholder="Correo electrónico" required>
+                </div>
+            </div>
 
-                    <a href="https://wa.me/tu-numero" class="btn-contactar" target="_blank" rel="noopener noreferrer">
-                        CONTACTAR AHORA
-                    </a>
+            <div class="fila-formulario">
+                <div class="grupo-formulario">
+                    <label for="telefono" class="solo-lectores">Teléfono / WhatsApp</label>
+                    <input type="tel" id="telefono" name="telefono" ngModel placeholder="Teléfono / WhatsApp" required>
                 </div>
 
+                <div class="grupo-formulario">
+                    <label for="ubicacion" class="solo-lectores">Ciudad / País</label>
+                    <input type="text" id="ubicacion" name="ubicacion" ngModel placeholder="Ciudad / País" required>
+                </div>
             </div>
 
-            <div class="privacidad-formulario">
-                <label class="contenedor-checkbox">
-                    <input type="checkbox" name="privacidad" required>
-                    <span class="texto-checkbox">
-                        He leído y acepto la <a href="/politica-privacidad">política de privacidad</a> de DARKY DOGS
-                    </span>
-                </label>
+            <div class="grupo-formulario ancho-completo">
+                <label for="interes" class="solo-lectores">Cuéntanos sobre ti</label>
+                <textarea id="interes" name="interes" rows="3" ngModel placeholder="Cuéntanos sobre ti y tu interés en la franquicia" required></textarea>
             </div>
 
-        </form>
+        </div>
+
+        <div class="acciones-formulario">
+            <button type="submit" class="btn-enviar" [disabled]="!franquiciaForm.valid">
+                ENVIAR A WHATSAPP
+                <span class="icono-flecha" aria-hidden="true">&gt;</span>
+            </button>
+
+            <a href="https://wa.me/524463758196" class="btn-contactar" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/franquicias/s5-icon.png" alt="WhatsApp Icon" class="icono-whatsapp">
+                CONTACTAR AHORA
+            </a>
+        </div>
+    </div>
+
+    <div class="privacidad-formulario">
+        <label class="contenedor-checkbox">
+            <input type="checkbox" name="privacidad" ngModel required>
+            <span class="texto-checkbox">
+                He leído y acepto la <a href="/politica-privacidad">política de privacidad</a> de DARKY DOGS
+            </span>
+        </label>
+    </div>
+
+</form>
     </div>
 </div>
