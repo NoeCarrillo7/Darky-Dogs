@@ -97,16 +97,206 @@
     line-height: 0.9; 
     display: inline-block
 }
+.content-s3{
+    position: relative;
+}
 .elemento2{
     width: 60%;
     z-index: 1;
 }
 .elemento3{
     transform: rotate(20deg);
-    width: 23%;
+    width: 60%;
     position: absolute;
-    top: 140%;
+    top: 45%;
+    right: 40%;
 }
+
+/* Se animan al entrar o salir la seccion en la pantalla al hacer scroll*/
+.content-s2 img{
+    width: 90%;
+}
+
+.hidden{
+    opacity: 0;
+    transform: translate3d(0,80px,0);
+    transition: transform .8s cubic-bezier(0.22,1,0.36,1), opacity .6s ease;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+.show{
+    opacity: 1 !important;
+    transform: translate3d(0,0,0) scale(1) rotate(0) !important;
+    transition: transform .8s cubic-bezier(0.22,1,0.36,1), opacity .6s ease;
+}
+
+.content-s1.hidden{
+    opacity: 0;
+    transform: translate3d(-100px,0,0);
+}
+
+.content-s2.hidden{
+    opacity: 0;
+    transform: translate3d(0,0,0) scale(.7) rotate(-10deg);
+}
+
+.content-s3.hidden{
+    opacity: 0;
+    transform: translate3d(100px,0,0);
+}
+
+/* Animaciones */
+.content-s2.show img{
+    animation: menuDrop 1.2s ease-out both;
+    will-change: transform, opacity;
+    animation-delay: 0.12s;
+}
+
+.content-s1.show{
+    animation: slideLeft 0.5s ease-out both;
+    animation-delay: 0s;
+}
+
+.content-s1.show h4,
+.content-s1.show span{
+    animation: fadeSlideUp 0.5s ease-out both;
+}
+
+.content-s1.show h4{
+    animation-delay: 0.5s;
+}
+
+.content-s1.show span{
+    animation-delay: 0.5s;
+}
+
+.content-s1.show .btn-menu{
+    animation: fadeSlideUp 0.8s ease-out both 0.25s, glow 2s infinite 0.4s;
+    will-change: transform, opacity, box-shadow;
+}
+
+.content-s1.show .btn-uber{
+    animation: fadeSlideUp 0.8s ease-out both 0.35s, glow 2s infinite 0.45s;
+    will-change: transform, opacity, box-shadow;
+}
+
+.content-s3.show{
+    animation: slideRight 1s ease-out .3s both;
+    animation-delay: 0.24s;
+}
+
+.content-s3.show h4,
+.content-s3.show h1{
+    animation: fadeSlideRight 0.8s ease-out both;
+}
+
+.content-s3.show h4{
+    animation-delay: 0.2s;
+}
+
+.content-s3.show h1{
+    animation-delay: 0.28s;
+}
+
+.content-s3.show .elemento2{
+    animation: fadeScale 0.8s ease-out both;
+    animation-delay: 0.35s;
+}
+
+.content-s3.show .elemento3{
+    animation: hotdogFloat 3s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes menuDrop{
+    0%{
+        opacity: 0;
+        transform: translate3d(0,-300px,0) rotate(-20deg) scale(.5);
+    }
+    70%{
+        opacity: 1;
+        transform: translate3d(0,20px,0) rotate(5deg) scale(1.05);
+    }
+    100%{
+        transform: translate3d(0,0,0) rotate(0) scale(1);
+    }
+}
+
+@keyframes slideLeft{
+    from{
+        opacity: 0;
+        transform: translate3d(-100px,0,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes slideRight{
+    from{
+        opacity: 0;
+        transform: translate3d(100px,0,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes fadeSlideUp{
+    from{
+        opacity: 0;
+        transform: translate3d(0,20px,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes fadeSlideRight{
+    from{
+        opacity: 0;
+        transform: translate3d(40px,0,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes fadeScale{
+    from{
+        opacity: 0;
+        transform: scale(0.85) translate3d(0,20px,0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1) translate3d(0,0,0);
+    }
+}
+
+@keyframes hotdogFloat{
+    0%,100%{
+        transform: rotate(20deg) translate3d(0,0,0);
+    }
+    50%{
+        transform: rotate(20deg) translate3d(0,-15px,0);
+    }
+}
+
+@keyframes glow{
+    0%,100%{
+        box-shadow: 0 0 15px rgba(255,255,255,.4);
+    }
+    50%{
+        box-shadow: 0 0 30px rgba(239,5,74,.9);
+    }
+}
+
+/* Responsivas */
 
 @media (max-width: 768px){
 
@@ -181,7 +371,7 @@
     .elemento3{
         width: 20%;
         top: auto;
-        right: 15%;
+        right: 20%;
     }
 
 }

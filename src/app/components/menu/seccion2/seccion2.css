@@ -71,6 +71,66 @@
     margin: 18px 0 0;
     border-bottom: 4px dashed #FEC568;
 }
+/*Animaciones*/
+.hidden-card{
+    opacity: 0;
+    transform: translateY(100px) scale(.8);
+    transition: all .8s ease;
+}
+
+.hidden-card.show-card{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.card.show-card .img img{
+    animation: foodPop .8s ease-out;
+}
+@keyframes foodPop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    70%{
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.card{
+    transition: transform .3s ease;
+}
+
+.card:hover{
+    transform: translateY(-15px);
+}
+
+.card:hover .img img{
+    transform: scale(1.08);
+}
+
+.img img{
+    transition: transform .3s ease;
+}
+.precio{
+    animation: selloGlow 2s infinite;
+}
+
+@keyframes selloGlow{
+    0%,100%{
+        transform: scale(1) rotate(-8deg);
+        text-shadow: 0 0 5px rgba(254,197,104,.4);
+    }
+
+    50%{
+        transform: scale(1.12) ;
+        text-shadow:
+            0 0 10px rgba(254,197,104,.8),
+            0 0 20px rgba(254,197,104,.6),
+            0 0 30px rgba(254,197,104,.4);
+    }
+}
 
 @media (max-width: 991px) {
     .productos {

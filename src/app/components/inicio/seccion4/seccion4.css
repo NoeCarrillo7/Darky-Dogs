@@ -85,6 +85,57 @@
 
 }
 
+/*Animaciones*/
+
+
+.hidden{
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+
+.elemento1.hidden{
+    transform: translateY(-100px);
+}
+.elemento2.hidden{
+    transform: translateX(-100px);
+}
+.elemento3.hidden{
+    transform: translateY(-100px);
+}
+
+.container > h1.hidden{
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+
+.mapa.hidden{
+    transform: translateX(-120px);
+}
+
+.direccion.hidden{
+    transform: translateX(120px);
+}
+
+
+.frase1.hidden{
+    transform: translateY(80px);
+}
+
+.frase2.hidden{
+    transform: translateY(80px) rotate(-10deg);
+}
+
+/* Visible */
+
+.show{
+    opacity: 1 !important;
+    transform: translate(0,0) rotate(0) scale(1) !important;
+}
+
+/* responsivas */
+
 @media (max-width: 768px){
 
     .container{

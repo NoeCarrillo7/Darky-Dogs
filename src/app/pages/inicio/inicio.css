@@ -15,14 +15,15 @@
     display: flex;
     align-items: center;
     justify-content: end;
+    
 }
 .seccion1-banner img{
     left: 9%;
     top: 35%;
     width: 40%;
     position: absolute;
+     animation: zoomBounce 1s ease-out;
 }
-
 
 .seccion2-banner{
     width: 55%;
@@ -97,9 +98,34 @@
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
+.elemento2-1{
+    animation: slideRightBounce 1.2s ease-out;
+}
 
+.elemento3{
+    animation: slideRightBounce 1.2s ease-out;
+}
+
+@keyframes slideRightBounce{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    70%{
+        transform: translateX(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Animación del botón */
+.seccion2-banner a,
 .mobile-banner a{
-    animation: pulse 1.2s infinite;
+    animation: pulse 2s infinite;
 }
 
 @keyframes pulse{
@@ -110,6 +136,9 @@
         transform: scale(1.05);
     }
 }
+
+/* Animación de las imágenes */
+.seccion1-banner img,
 .mobile-banner img{
     animation: zoomBounce 1s ease-out;
 }
@@ -127,6 +156,7 @@
         transform: scale(1);
     }
 }
+
 
 @media (max-width: 768px) {
     .desktop-banner {

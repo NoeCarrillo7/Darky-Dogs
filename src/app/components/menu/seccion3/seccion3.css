@@ -123,6 +123,96 @@
     border-bottom: 4px dashed #FEC568;
 }
 
+/*ANIMACIONES*/
+
+.hidden-extra{
+    opacity: 0;
+    transform: scale(.6);
+}
+
+.hidden-extra.show-extra{
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1s ease;
+}
+
+.hidden-fries{
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all .8s ease;
+}
+
+.hidden-fries.show-fries{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fries-card:nth-child(1){
+    transition-delay: .1s;
+}
+
+.fries-card:nth-child(2){
+    transition-delay: .25s;
+}
+
+.fries-card:nth-child(3){
+    transition-delay: .4s;
+}
+
+.fries-card:nth-child(4){
+    transition-delay: .55s;
+}
+.fries-card.show-fries .fries-img img{
+    animation: friesFloat 3s ease-in-out infinite;
+}
+
+@keyframes friesFloat{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+.fries-card.show-fries .fries-img img{
+    animation: friesFloat 3s ease-in-out infinite;
+}
+
+@keyframes friesFloat{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+.fries-precio{
+    animation:
+        selloPulse 1.5s infinite,
+        precioGlow 2s infinite;
+}
+
+@keyframes selloPulse{
+    0%,100%{
+        transform: scale(1) rotate(-8deg);
+    }
+    50%{
+        transform: scale(1.12) rotate(-8deg);
+    }
+}
+
+@keyframes precioGlow{
+    0%,100%{
+        text-shadow: 0 0 5px rgba(254,197,104,.4);
+    }
+    50%{
+        text-shadow:
+            0 0 10px rgba(254,197,104,.8),
+            0 0 20px rgba(254,197,104,.6);
+    }
+}
+
 @media (max-width: 991px) {
     .fries-grid{
         grid-template-columns: repeat(2, minmax(220px, 1fr));
