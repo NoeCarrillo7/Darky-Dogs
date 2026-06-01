@@ -160,6 +160,9 @@
     font-weight: 500;
     letter-spacing: 3px;
 }
+.diseño{
+    text-decoration: none;
+}
 
 
 @media (max-width: 768px){
