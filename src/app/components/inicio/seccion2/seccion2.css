@@ -3,27 +3,35 @@
     display: flex;
     padding-top: 50px;
     width: 100%;
+    height: 100%;
+    
+    background-image: url('/assets/elementos-inicio/fondoini.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 .content-s1{
     width: 27%;
     padding-left: 10%;
+    padding-top: 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .content-s1 h4{
     color: #EF054A;
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 2px;
     display: inline-block;
     transform: rotate(-5deg);
 }
 .content-s1 span{
-    color: #ffffff;
+    color: #000000;
     font-size: 80px;
     letter-spacing: 2px;
-    font-weight: 300;
+    font-weight: 700;
     display: inline-block;
     transform: rotate(-5deg);
 }
@@ -47,7 +55,7 @@
 .btn-uber{
     width: 60%;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     letter-spacing: 2px;
     font-weight: 700;
@@ -55,18 +63,26 @@
     align-items: center;
     justify-content: center;
     padding: 15px 50px;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     border-radius: 10px;
     margin-top: 20px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
+.btn-uber span{
+    color: #06C167; 
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 8px;
+    text-shadow: 0 0 10px rgba(6,193,103,.6);
+}
 
 
 .content-s2{
-    width: 28%;
+    width: 31%;
+    padding-top: 5%;
 }
 .content-s2 img{
-    width: 90%;
+    width: 95%;
 }
 
 
@@ -75,7 +91,7 @@
     width: 34%;
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
+    padding-top:150px;
 }
 .content-s3 h4{
     color: #EF054A;
@@ -86,7 +102,7 @@
     margin-bottom: 20px;
 }
 .content-s3 h1{
-    color: #ffffff;
+    color: #000000;
     font-size: 80px;
     letter-spacing: 2px;
     padding: 0;
@@ -108,7 +124,7 @@
     transform: rotate(20deg);
     width: 60%;
     position: absolute;
-    top: 45%;
+    top: 55%;
     right: 40%;
 }
 
@@ -311,6 +327,7 @@
     .content-s1{
         width: 45%;
         padding-left: 0;
+        padding-top: 25%;
     }
 
     .content-s2{
@@ -361,6 +378,11 @@
         width: 90%;
         padding: 10px;
         font-size: 10px;
+    }
+
+    .btn-uber span{
+        font-size: 10px;
+        padding-left: 4px;
     }
 
     .elemento2{

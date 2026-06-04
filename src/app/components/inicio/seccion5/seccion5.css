@@ -1,68 +1,85 @@
 .container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding:60px 20px;
-    height: 650px;
-}
-
-.elemento1{
-    position: absolute;
-    width: 100%;
-}
-
-.container h1{
-    font-size: 80px;
-    color: white;
-    margin-top: 250px;
-    letter-spacing: 2px;
-
-}
-.container h2{
-    color: #EF054A;
-    font-size: 40px;
-    letter-spacing: 2px;
-    font-weight: 400;
-}
-
-.botones{
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-.botones button{
-    color: white;
-    background-color: #EF054A;
-    width: 40%;
-    height: 90px;
-    border: none;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: 700;
-    cursor: pointer;
-    display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    gap: 80px;
+    min-height: 550px;
+    padding: 20px 10%;
+    background-image: url('/assets/elementos-inicio/s5-elemento4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.lado-izquierdo{
+    padding-top: 10%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.lado-izquierdo img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.lado-derecho{
+    padding-top: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo-final{
+    font-size: 70px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.botones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.btn-llamar{
+    width: 70%;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background: #EF054A;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
 }
 
 .btn-uber{
+    width: 70%;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    background: white;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
     display: flex;
-    gap: 5%;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
 }
+
 .btn-uber img{
-    width: 25%;
+    width: 40px;
 }
 
 /*Animaciones*/
 
-.elemento1.hidden{
+.lado-izquierdo.hidden{
     opacity: 0;
-    transform: translateY(-300px) scale(.7);
+    transform: translateX(-600px) rotate(-8deg);
 }
+
 .titulo-final.hidden{
     opacity: 0;
     transform: scale(.2);
@@ -80,16 +97,40 @@
     transform: translate(0,0) scale(1) rotate(0) !important;
     transition: all 1s ease;
 }
-.elemento1.show{
-    animation: naveFloat 4s ease-in-out infinite;
+
+.lado-izquierdo.show img{
+    animation: deliveryEnter 1.2s ease-out forwards;
 }
 
-@keyframes naveFloat{
-    0%,100%{
+/* Entrada para lado derecho cuando se muestra */
+.lado-derecho.show{
+    animation: slideUp 0.9s ease-out both;
+}
+
+@keyframes slideUp{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
         transform: translateY(0);
     }
-    50%{
-        transform: translateY(-20px);
+}
+@keyframes deliveryEnter{
+    0%{
+        opacity: 0;
+        transform: translateX(-600px) rotate(-8deg);
+    }
+
+    70%{
+        opacity: 1;
+        transform: translateX(30px) rotate(2deg);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0) rotate(0);
     }
 }
 .botones.show button{
@@ -109,55 +150,43 @@
 /*Responsivas*/
 
 @media (max-width: 768px){
-
-    .container h1{
-        font-size: 35px;
-        text-align: center;
-        line-height: 1.1;
-        margin-top: 80px;
-        padding: 0 10px;
-    }
-
-    .container h2{
-        font-size: 20px;
-        text-align: center;
-        line-height: 1.3;
-        padding: 0 10px;
-        margin-top: 10px;
-    }
-
-    .elemento1{
-        display: none;
-    }
-
-    .botones{
-        width: 90%;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        margin-top: 30px;
-    }
-
-    .botones button{
-        width: 100%;
-        max-width: 400px;
-        height: 75px;
-
-        font-size: 18px;
-        letter-spacing: 1px;
-    }
-    .btn-uber img{
-        width: 20%;
-    }
-
-}
-
-@media (max-width: 500px) {
     .container{
-        padding-top: 0;
-        height: 300px;
+        flex-direction: column;
+        gap: 30px;
+        min-height: auto;
+        padding: 25px 5%;
     }
-    .container h1{
-        margin-top: 0;
+
+    .lado-izquierdo{
+        width: 60%;
+        padding-top: 15%;
+        order: 1;
+    }
+
+    .lado-izquierdo img{
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .lado-derecho{
+        width: 100%;
+        padding-top: 0;
+        order: 2;
+    }
+
+    .titulo-final{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .btn-llamar,
+    .btn-uber{
+        width: 80%;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .btn-uber img{
+        width: 30px;
     }
 }
