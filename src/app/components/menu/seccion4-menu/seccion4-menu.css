@@ -1,0 +1,153 @@
+.container{
+    background-image: url('/assets/menu/seccion2/s2-elemento1.png');
+    background-size: 100% auto;
+    background-color: white;
+    color: white;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+
+
+
+.producto{
+    display: flex;
+    margin: 25px 0;
+    background-color: black;
+    border-radius: 20px;
+    width: 80%;
+}
+.producto img{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+.info h1{
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.info h1 span, .info2 h1 span, .info p span{
+    color: #EF054A;
+}
+.info p, .info2 p{
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.info h2, .info2 h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #EF054A;
+    font-style: italic;
+}
+.info h2 span, .info2 h2 span{
+    font-size: 1.5rem;
+}
+
+
+.content-producto2{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.producto2{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 20px;
+}
+.info2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 1200px){
+    .content{
+        padding-top: 100px;
+    }
+    .info h1{
+        font-size: 3rem;
+        line-height: 1;
+    }
+    .info p{
+        width: 90%;
+        font-size: 1rem;
+    }
+    .info h2{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:700px){
+    .hotdogs{
+        width: 50%;
+    }
+    .info{
+        gap: 10px;
+    }
+    .info h1,.info2 h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .info p, .info2 p{
+        font-size: 0.7rem;
+        font-weight: 300;
+        width: 90%;
+    }
+    .info h2, .info2 h2{
+        font-size: 1.5rem;
+    }
+    .info h2 span, .info2 h2 span{
+        font-size: 0.8rem;
+    }
+}
+@media(max-width:500px){
+    .content{
+        padding-top: 50px;
+    }
+    .hotdogs{
+        width: 80%;
+    }
+    .producto{
+        flex-direction: column-reverse;
+    }
+    .producto img, .producto2 img{
+        width: 100%;
+    }
+    .info{
+        padding: 20px 0;
+    }
+    .info, .info2{
+        width: 100%;
+    }
+    .producto2{
+        width: 100%;
+    }
+    .content-producto2{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}

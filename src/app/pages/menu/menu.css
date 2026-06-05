@@ -37,6 +37,10 @@
     animation: heroImpact 1.2s ease forwards;
 }
 
+.space{
+    height: 110px;
+}
+
 @keyframes heroImpact{
     0%{
         opacity: 0;
@@ -81,4 +85,10 @@
         padding-bottom: 20px;
     }
 
+}
+
+@media (max-width: 768px){
+    .space{
+        height: 90px;
+    }
 }

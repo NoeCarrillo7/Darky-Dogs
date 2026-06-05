@@ -1,0 +1,109 @@
+.container{
+    background-color: #111111;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-productos, .content-productos2{
+    display : flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.content-productos2{
+    margin: 25px 0 50px 0;
+}
+.content-productos{
+    margin-top: 50px;
+}
+.producto1{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 20px;
+}
+.producto1 img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    gap: 10px;
+    color: white;
+}
+.info h1{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.info h1 span, .info2 h1 span, .info p span{
+    color: #EF054A;
+}
+.info p, .info2 p{
+    width: 70%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.info h2, .info2 h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #EF054A;
+    font-style: italic;
+}
+.info h2 span, .info2 h2 span{
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1200px){
+    .info h1{
+        font-size: 2.6rem;
+    }
+    .info p{
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 700px){
+    .hotdogs{
+        width: 40%;
+    }
+    .info h1{
+        font-size: 1.5rem;
+    }
+    .info p{
+        width: 90%;
+        font-size: 0.7rem;
+    }
+    .info h2{
+        font-size: 1.2rem;
+    }
+    .info h2 span{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width:500px){
+    .content-productos, .content-productos2{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .producto1{
+        width: 100%;
+    }
+    .info p{
+        width: 80%;
+    }
+}

@@ -1,28 +1,42 @@
-.container{
+.container {
     background-color: black;
     color: white;
     width: 100%;
     padding-bottom: 50px;
+    overflow: hidden; 
 }
-.banner{
+
+.banner {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.content1{
+
+.content1 {
     width: 60%;
 }
-.content11{
-    display: none;
+
+.content1 img, 
+.content11 img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
-.content2{
+
+.content11 {
+    display: none;
+    width: 100%;
+}
+
+.content2 {
     width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     margin-right: 8%;
 }
+
 .content2 h1 {
     font-size: 6rem;
     font-weight: 800;
@@ -38,10 +52,13 @@
     color: #EF054A;
 }
 
-.content2 img{
+.content2 .linea-decorativa {
     width: 100%;
+    max-width: 400px;
+    margin: 15px 0;
 }
-.content2 p{
+
+.content2 p {
     font-size: 1.5rem;
     letter-spacing: 2px;
     font-weight: 300;
@@ -49,47 +66,101 @@
     padding: 0;
     text-align: right;
 }
-.content2 p span{
+
+.content2 p span {
     color: #FEC568;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.content1, .content11 {
+    animation: scaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.content2 h1 {
+    animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.2s;
+}
+
+.content2 .linea-decorativa {
+    animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.4s;
+}
+
+.content2 p {
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.6s;
+}
 
 @media (max-width: 1200px) {
-    .banner{
+    .banner {
         flex-direction: column;
     }
-    .content1, .content1 img{
+    .content1 {
         width: 100%;
     }
-    .content2{
-        width: auto;
+    .content2 {
+        width: 100%;
         align-items: center;
-        margin: 0;
+        margin-right: 0;
         padding: 5%;
     }
-    .content2 h1{
-        text-align: center;
-    }
-    .content2 p{
+    .content2 h1, 
+    .content2 p {
         text-align: center;
     }
 }
 
 @media (max-width: 500px) {
-    .content2 h1{
+    .content2 h1 {
         font-size: 3rem;
     }
-    .content2 p{
+    .content2 p {
         font-size: 1rem;
     }
-    .content11{
-        display: flex;
-    }
-    .content11 img{
-        width: 100%;
-    }
-    .content1{
+    .content1 {
         display: none;
+    }
+    .content11 {
+        display: block;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content1, .content11, .content2 h1, .content2 .linea-decorativa, .content2 p {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
     }
 }

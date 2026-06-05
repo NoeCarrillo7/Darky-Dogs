@@ -1,0 +1,171 @@
+.container{
+    color: #ef054b;
+    background-color: #111111;
+    display: flex;
+}
+
+.slogan{
+    width: 60%;
+    padding: 250px 0 0 8%;
+    animation: fadeInSlogan 1.5s ease-out forwards;
+    opacity: 0;
+}
+.slogan h1{
+    font-size: 17rem;
+    font-weight: 800;
+    line-height: 0.6;
+    animation: slideInFromLeft 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+.slogan p{
+    font-size: 2rem;
+    color: white;
+    font-style: italic;
+    animation: slideInFromRight 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+    transform: translateX(50px);
+}
+.slogan h2{
+    font-size: 3.5rem;
+    font-style: italic;
+    animation: scaleInAndShake 0.6s ease-out 0.9s forwards;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.banner{
+    padding-top: 20px;
+    width: 40%;
+}
+.banner2{
+    display: none;
+}
+.banner img, .banner2 img{
+    width: 100%;
+    object-fit: cover;
+    animation: floatOrb 6s ease-in-out infinite, holographicPulse 4s linear infinite;
+}
+
+
+
+@media (max-width: 1200px){
+    .container{
+        flex-direction: column-reverse;
+    }
+    .slogan{
+        width: 100%;
+        padding-top: 0;
+    }
+    .banner{
+        display: none;
+    }
+    .banner2{
+        display: flex;
+        justify-content: end;
+        padding: 5%;
+    }
+    .banner2 img{
+        width: 15%;
+    }
+}
+
+@media (max-width: 700px){
+
+    .slogan h1{
+        font-size: 10rem;
+        margin-top: 100px;
+    }
+    .slogan p{
+        font-size: 1.5rem;
+    }
+    .slogan h2{
+        font-size: 2rem;
+    }
+    .banner2{
+        position: absolute;
+        top: 150px;
+    }
+    .banner2 img{
+        width: 20%;
+    }
+}
+
+@media (max-width: 500px){
+    .slogan h1{
+        font-size: 5rem;
+        margin-top: 60px;
+    }
+    .slogan p{
+        font-size: 0.8rem;
+    }
+    .slogan h2{
+        font-size: 1.2rem;
+    }
+    .banner2{
+        position: absolute;
+        top: 150px;
+    }
+    .banner2 img{
+        width: 20%;
+    }
+}
+
+
+/* Movimiento flotante sutil en el eje Y y rotación mínima */
+@keyframes floatOrb {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+}
+
+/* Efecto de escáner que intensifica el rosa/magenta de forma cíclica */
+@keyframes holographicPulse {
+    0%, 100% {
+        filter: brightness(1) drop-shadow(0 0 5px rgba(239, 5, 74, 0.2));
+    }
+    50% {
+        filter: brightness(1.4) drop-shadow(0 0 25px rgb(239, 5, 75));
+    }
+}
+
+@keyframes fadeInSlogan {
+  to {
+    opacity: 1;
+  }
+}
+
+/* 2. Deslizamiento suave desde la izquierda */
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 3. Deslizamiento suave desde la derecha */
+@keyframes slideInFromRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 4. Escala progresiva con un ligero "sacudión" al final */
+@keyframes scaleInAndShake {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.1); /* Efecto de "sacudión" */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Estado final estable */
+  }
+}
