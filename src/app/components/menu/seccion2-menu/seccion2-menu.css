@@ -1,14 +1,18 @@
-.container{
+.container {
     background-image: url('/assets/menu/seccion2/s2-elemento1.png');
     background-size: 100% auto;
     background-color: white;
     color: white;
+    overflow: hidden;
 }
-.fondo{
+
+
+.fondo {
     width: 100%;
     display: block;
 }
-.content{
+
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,157 +20,283 @@
     padding-top: 200px;
 }
 
-.producto{
-    display: flex;
-    margin: 25px 0;
-    background-color: black;
-    border-radius: 20px;
-    width: 80%;
-}
-.producto img{
-    width: 50%;
-    border-radius: 20px;
+.hotdogs {
+    display: block;
+    margin-bottom: 25px;
 }
 
-.info{
+/* --- CONTENEDORES: ENERGÍA SITH INESTABLE Y LEVITACIÓN --- */
+.producto, .producto2 {
+    background-color: #050505;
+    border-radius: 20px;
+    position: relative; 
+    overflow: hidden; 
+    box-sizing: border-box;
+    border: 2px solid rgba(239, 5, 74, 0.4);
+
+    /* Animación doble: Levitación antigravitatoria + Cortocircuito de plasma */
+    animation: levitacionFuerza 6s infinite ease-in-out,
+               flickerKyber 0.8s infinite alternate ease-in-out;
+    
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                border-color 0.2s ease, 
+                box-shadow 0.2s ease;
+}
+
+.producto {
+    display: flex;
+    margin: 25px 0;
+    width: 80%;
+}
+
+.producto img {
+    width: 50%;
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.info {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 20px;
     gap: 20px;
+    box-sizing: border-box;
+    z-index: 3; /* Por encima del túnel hiperespacial */
 }
-.info h1{
+
+.info h1 {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
-.info h1 span, .info2 h1 span{
+
+.info h1 span, .info2 h1 span {
     color: #EF054A;
+    text-shadow: 0 0 12px #EF054A;
 }
-.info p, .info2 p{
+
+.info p, .info2 p {
     width: 70%;
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 2px;
     text-align: center;
+    margin: 0;
+    color: #e0e0e0;
 }
-.info h2, .info2 h2{
+
+/* Precios con efecto HUD electrónico */
+.info h2, .info2 h2 {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 2px;
     color: #EF054A;
     font-style: italic;
+    margin: 0;
+    text-shadow: 0 0 8px #EF054A;
+    animation: hudFlicker 4s infinite step-end;
 }
-.info h2 span, .info2 h2 span{
+
+.info h2 span, .info2 h2 span {
     font-size: 1.5rem;
 }
 
-
-
-
-.content-producto2{
+/* --- CONTENEDORES SECUNDARIOS (DOS COLUMNAS) --- */
+.content-producto2 {
     width: 80%;
     display: flex;
     justify-content: space-between;
 }
-.producto2{
+
+.producto2 {
     width: 49%;
     display: flex;
     flex-direction: column;
-    background-color: black;
-    border-radius: 20px;
+    margin-bottom: 25px;
 }
-.producto2 img{
+
+.producto2 img {
     width: 100%;
     border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
-.info2{
+
+.info2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 0;
+    padding: 30px;
     gap: 10px;
+    box-sizing: border-box;
+    z-index: 3;
 }
-.info2 h1{
+
+.info2 h1 {
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 2px;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
- .info2 p{
+
+.info2 p {
     width: 80%;
     font-size: 1.3rem;
- }
-
-
-@media (max-width: 1200px){
-    .content{
-        padding-top: 100px;
-    }
-    .info h1,.info2 h1{
-        font-size: 2.5rem;
-        text-align: center;
-    }
-    .info p, .info2 p{
-        font-size: 1rem;
-        font-weight: 300;
-        width: 90%;
-    }
-    .info h2, .info2 h2{
-        font-size: 2rem;
-    }
+    margin: 0;
+    color: #e0e0e0;
 }
-@media (max-width: 700px){
-    .hotdogs{
-        width: 40%;
-    }
-    .info{
-        gap: 10px;
-    }
-    .info h1,.info2 h1{
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    .info p, .info2 p{
-        font-size: 0.7rem;
-        font-weight: 300;
-        width: 90%;
-    }
-    .info h2, .info2 h2{
-        font-size: 1.5rem;
-    }
-    .info h2 span, .info2 h2 span{
-        font-size: 0.8rem;
-    }
+
+/* --- DESFASES PARA ROMPER SINCRONIZACIÓN AUTOMÁTICA --- */
+.content-producto2 .producto2:nth-child(2) {
+    animation-delay: 1.5s;
+}
+.producto.segundo {
+    animation-delay: 3s;
 }
 
 
-@media (max-width: 500px){
-    .content{
-        padding-top: 50px;
+/* --- COMPORTAMIENTO AL PASAR EL CURSOR (HOVER: PROPULSIÓN) --- */
+.producto:hover, .producto2:hover {
+    transform: translateY(-15px) scale(1.03) !important; /* Domina la levitación */
+    border-color: #ffffff; /* Núcleo blanco de sable */
+    box-shadow: 0 0 40px #EF054A, 
+                inset 0 0 25px rgba(239, 5, 74, 0.6);
+    cursor: pointer;
+}
+
+.producto:hover img, .producto2:hover img {
+    transform: scale(1.05) rotate(0.5deg);
+}
+
+
+/* --- EFECTO VISUAL: TÚNEL DE PARTICÚLAS DEL HIPERESPACIO --- */
+.producto::before, .producto2::before {
+    content: '';
+    position: absolute;
+    inset: -50%;
+    background-image: 
+        radial-gradient(1px 80px at 20px 40px, #ffffff, transparent),
+        radial-gradient(1.5px 120px at 100px 150px, #EF054A, transparent),
+        radial-gradient(1px 90px at 200px 80px, #ffffff, transparent);
+    background-size: 300px 300px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.producto:hover::before, .producto2:hover::before {
+    opacity: 0.4;
+    transform: scale(1.2);
+    animation: velocidadLuz 0.4s infinite linear;
+}
+
+/* Desfases del efecto hiperespacio interno */
+.content-producto2 .producto2:nth-child(2)::before {
+    animation-delay: 0.5s;
+}
+.producto.segundo::before {
+    animation-delay: 1s;
+}
+
+
+/* --- KEYFRAMES (LÓGICA SITH) --- */
+
+/* 1. Levitación Antigravitacional por la Fuerza */
+@keyframes levitacionFuerza {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* 2. Inestabilidad de Cristal Kyber (Plasma inestable en bordes) */
+@keyframes flickerKyber {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(239, 5, 74, 0.5), inset 0 0 10px rgba(239, 5, 74, 0.2);
+        border-color: rgba(239, 5, 74, 0.5);
     }
-    .producto{
-        flex-direction: column;
+    25% {
+        box-shadow: 0 0 25px #EF054A, inset 0 0 15px rgba(239, 5, 74, 0.4);
+        border-color: rgba(239, 5, 74, 0.8);
     }
-    .producto img{
-        width: 100%;
+    50% {
+        box-shadow: 0 0 12px rgba(239, 5, 74, 0.3), inset 0 0 8px rgba(239, 5, 74, 0.1);
+        border-color: rgba(239, 5, 74, 0.3);
     }
-    .info{
-        width: 100%;
-        padding: 20px 0;
-        line-height: 0.9;
+    75% {
+        box-shadow: 0 0 35px #EF054A, inset 0 0 20px rgba(239, 5, 74, 0.5);
+        border-color: #ffffff; /* Destello crítico */
     }
-    .producto.segundo{
-        flex-direction: column-reverse;
+}
+
+/* 3. Salto a la Velocidad de la Luz (Túnel masivo vertical) */
+@keyframes velocidadLuz {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 300px; }
+}
+
+/* 4. Micro-parpadeo electrónico de pantalla TIE */
+@keyframes hudFlicker {
+    0%, 95%, 98% { opacity: 1; filter: none; }
+    96%, 97%, 99% { opacity: 0.8; filter: blur(0.5px) brightness(1.5); }
+}
+
+
+/* --- DISEÑO RESPONSIVO (MEDIA QUERIES DE PROTECCIÓN) --- */
+
+@media (max-width: 1200px) {
+    .content { padding-top: 100px; }
+    .info h1, .info2 h1 { font-size: 2.5rem; }
+    .info p, .info2 p { font-size: 1rem; width: 90%; }
+    .info h2 { font-size: 2rem; }
+    .info2 h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 700px) {
+    .hotdogs { width: 40%; margin-bottom: 15px; }
+    .info { gap: 10px; }
+    .info h1, .info2 h1 { font-size: 1.5rem; }
+    .info p, .info2 p { font-size: 0.7rem; width: 90%; }
+    .info h2 { font-size: 1.5rem; }
+    .info2 h2 { font-size: 1.3rem; }
+    .info h2 span, .info2 h2 span { font-size: 0.8rem; }
+
+    /* Desactivación de partículas complejas para evitar sobrecalentamiento móvil */
+    .producto::before, .producto2::before {
+        display: none !important;
     }
-    .content-producto2{
-        flex-direction: column;
-        gap: 20px;
+    .producto:hover img, .producto2:hover img {
+        transform: none !important;
     }
-    .producto2{
-        width: 100%;
+    .producto, .producto2 {
+        animation: fuerzaMobile 4s infinite ease-in-out;
     }
+    @keyframes fuerzaMobile {
+        0%, 100% { box-shadow: 0 0 12px rgba(239, 5, 74, 0.5); transform: translateY(0); }
+        50% { box-shadow: 0 0 22px #EF054A; transform: translateY(-4px); }
+    }
+}
+
+@media (max-width: 500px) {
+    .content { padding-top: 50px; }
+    .producto { flex-direction: column; }
+    .producto img { width: 100%; }
+    .info { width: 100%; padding: 20px; line-height: 1.2; }
+    .producto.segundo { flex-direction: column-reverse; }
+    .content-producto2 { flex-direction: column; gap: 20px; width: 80%; }
+    .producto2 { width: 100%; margin-bottom: 0; }
+    .info2 { padding: 20px; }
 }

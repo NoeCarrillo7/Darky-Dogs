@@ -4,35 +4,49 @@
     display: flex;
 }
 
-.slogan{
+.slogan {
     width: 60%;
     padding: 250px 0 0 8%;
-    animation: fadeInSlogan 1.5s ease-out forwards;
     opacity: 0;
+    transition: opacity 0.5s ease-out;
 }
-.slogan h1{
+.slogan h1 {
     font-size: 17rem;
     font-weight: 800;
     line-height: 0.6;
-    animation: slideInFromLeft 0.8s ease-out 0.2s forwards;
     opacity: 0;
     transform: translateX(-50px);
 }
-.slogan p{
+.slogan p {
     font-size: 2rem;
     color: white;
     font-style: italic;
-    animation: slideInFromRight 0.8s ease-out 0.5s forwards;
     opacity: 0;
     transform: translateX(50px);
 }
-.slogan h2{
+.slogan h2 {
     font-size: 3.5rem;
     font-style: italic;
-    animation: scaleInAndShake 0.6s ease-out 0.9s forwards;
     opacity: 0;
     transform: scale(0.5);
 }
+
+
+.slogan.visible {
+    animation: fadeInSlogan 1.5s ease-out forwards;
+}
+.slogan.visible h1 {
+    animation: slideInFromLeft 0.8s ease-out 0.2s forwards;
+}
+.slogan.visible p {
+    animation: slideInFromRight 0.8s ease-out 0.5s forwards;
+}
+.slogan.visible h2 {
+    animation: scaleInAndShake 0.6s ease-out 0.9s forwards;
+}
+
+
+
 
 .banner{
     padding-top: 20px;

@@ -1,0 +1,190 @@
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    min-height: 550px;
+    padding: 0 10%;
+    background-color: #111111;
+}
+.lado-izquierdo{
+    padding-top: 0%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.lado-izquierdo img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.lado-derecho{
+    padding-top: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo-final{
+    font-size: 70px;
+    color: white;
+    margin-bottom: 10px;
+}
+.botones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.btn-llamar{
+    width: 70%;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background: #EF054A;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.btn-uber{
+    width: 70%;
+    height: 50px;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.btn-uber img{
+    width: 40px;
+}
+
+/*Animaciones*/
+
+.lado-izquierdo.hidden{
+    opacity: 0;
+    transform: translateX(-600px) rotate(-8deg);
+}
+
+.titulo-final.hidden{
+    opacity: 0;
+    transform: scale(.2);
+}
+.subtitulo-final.hidden{
+    opacity: 0;
+    transform: translateY(60px);
+}
+.botones.hidden{
+    opacity: 0;
+    transform: translateY(100px);
+}
+.show{
+    opacity: 1 !important;
+    transform: translate(0,0) scale(1) rotate(0) !important;
+    transition: all 1s ease;
+}
+
+.lado-izquierdo.show img{
+    animation: deliveryEnter 1.2s ease-out forwards;
+}
+
+/* Entrada para lado derecho cuando se muestra */
+.lado-derecho.show{
+    animation: slideUp 0.9s ease-out both;
+}
+
+@keyframes slideUp{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes deliveryEnter{
+    0%{
+        opacity: 0;
+        transform: translateX(-600px) rotate(-8deg);
+    }
+
+    70%{
+        opacity: 1;
+        transform: translateX(30px) rotate(2deg);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+    }
+}
+.botones.show button{
+    animation: pulseBtn 2s infinite;
+}
+
+@keyframes pulseBtn{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+}
+
+
+/*Responsivas*/
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+        gap: 30px;
+        min-height: auto;
+        padding: 25px 5%;
+    }
+
+    .lado-izquierdo{
+        width: 60%;
+        padding-top: 15%;
+        order: 1;
+    }
+
+    .lado-izquierdo img{
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .lado-derecho{
+        width: 100%;
+        padding-top: 0;
+        order: 2;
+    }
+
+    .titulo-final{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .btn-llamar,
+    .btn-uber{
+        width: 80%;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .btn-uber img{
+        width: 30px;
+    }
+}

@@ -34,4 +34,14 @@ export class Seccion5 {
       observer.observe(elemento);
     });
   }
+
+  pedirUber(): void {
+    const urlUber = 'https://www.ubereats.com/store/darky-dogs-queretaro/EBZ8FD5tTGimpOBU88D8Zw';
+    window.open(urlUber, '_blank', 'noopener,noreferrer');
+  }
+  
+  llamarNegocio(): void {
+    const numeroTelefono = 'tel:+524463758196';
+    window.location.href = numeroTelefono;
+  }
 }

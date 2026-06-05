@@ -7,7 +7,7 @@
             <a  routerLink="/inicio">Inicio</a>
             <a  routerLink="/menu">Menú</a>
             <a  routerLink="/eventos">Eventos</a>
-            <a  routerLink="/franquicias">Franquicias</a>
+            <a  [routerLink]="getOrdenarLink().path" [fragment]="getOrdenarLink().fragment">Ordenar</a>
         </div>
         <div class="horario">
             <div class="icon">

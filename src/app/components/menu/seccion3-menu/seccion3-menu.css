@@ -1,37 +1,70 @@
-.container{
+/* === ESTILOS CSS DEL COMPONENTE === */
+
+.container {
     background-color: #111111;
+    overflow: hidden;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.content-productos, .content-productos2{
-    display : flex;
+.content-productos, .content-productos2 {
+    display: flex;
     justify-content: space-between;
     width: 80%;
 }
-.content-productos2{
+
+.content-productos2 {
     margin: 25px 0 50px 0;
 }
-.content-productos{
+
+.content-productos {
     margin-top: 50px;
 }
-.producto1{
+
+/* --- TARJETAS CON ANIMACIÓN DE ENERGÍA Y MOVIMIENTO --- */
+.producto1 {
     width: 49%;
     display: flex;
     flex-direction: column;
     background-color: black;
     border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid rgba(239, 5, 74, 0.15);
+
+    /* Animación base que simula flotación constante pero divertida */
+    animation: flotacionDivertida 5s infinite ease-in-out;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), /* Efecto rebote (backOut) */
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
 }
-.producto1 img{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+
+/* Desfases asíncronos para que no bailen al mismo tiempo */
+.content-productos .producto1:nth-child(2) { animation-delay: 0.8s; }
+.content-productos2 .producto1:nth-child(1) { animation-delay: 1.6s; }
+.content-productos2 .producto1:nth-child(2) { animation-delay: 2.4s; }
+
+/* --- EFECTO ZOOM DE LENTE EN LA IMAGEN (DIVERTIDO/VISUAL) --- */
+.producto1 img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-.info{
+
+.producto1:hover img {
+    transform: scale(1.08) rotate(1deg); /* La foto cobra vida e invita a morder */
+}
+
+.info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,71 +72,181 @@
     padding: 30px 0;
     gap: 10px;
     color: white;
+    box-sizing: border-box;
+    z-index: 3; /* Por encima de los destellos y partículas */
 }
-.info h1{
+
+.info h1 {
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
+    margin: 0;
+    transition: transform 0.3s ease;
 }
-.info h1 span, .info2 h1 span, .info p span{
+
+.info h1 span, .info p span {
     color: #EF054A;
 }
-.info p, .info2 p{
+
+.info p {
     width: 70%;
     font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: 2px;
     text-align: center;
+    margin: 0;
 }
-.info h2, .info2 h2{
+
+.info h2 {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 2px;
     color: #EF054A;
     font-style: italic;
+    margin: 0;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5);
 }
-.info h2 span, .info2 h2 span{
+
+.info h2 span {
     font-size: 1.5rem;
 }
 
-@media (max-width: 1200px){
-    .info h1{
-        font-size: 2.6rem;
+/* --- INTERACCIÓN HOVER DE IMPACTO VISUAL --- */
+.producto1:hover {
+    transform: translateY(-12px) scale(1.02); /* Movimiento vertical marcado */
+    border-color: #EF054A;
+    box-shadow: 0 20px 40px rgba(239, 5, 74, 0.5),
+                inset 0 0 20px rgba(239, 5, 74, 0.3);
+    cursor: pointer;
+}
+
+/* Detalle pop-out en el precio al poner el cursor */
+.producto1:hover .info h2 {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+
+/* --- CAPA DE EFECTO 1: BARRIDO DE LUZ NEÓN CONTINUO --- */
+.producto1::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 40%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(239, 5, 74, 0.1) 30%,
+        rgba(255, 255, 255, 0.5) 50%, 
+        rgba(239, 5, 74, 0.3) 70%,   
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: barridoLuz 5s infinite linear;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Desfases del barrido */
+.content-productos .producto1:nth-child(2)::before { animation-delay: 1.2s; }
+.content-productos2 .producto1:nth-child(1)::before { animation-delay: 2.4s; }
+.content-productos2 .producto1:nth-child(2)::before { animation-delay: 3.6s; }
+
+
+/* --- CAPA DE EFECTO 2: CONFETI / ENERGÍA MAGNÉTICA (ACTIVA EN HOVER) --- */
+.producto1::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle, #EF054A 10%, transparent 11%),
+        radial-gradient(circle, #ffffff 10%, transparent 11%),
+        radial-gradient(circle, #EF054A 5%, transparent 6%);
+    background-size: 40px 40px, 60px 60px, 30px 30px;
+    background-position: 0 0, 20px 30px, 15px 15px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: screen;
+    transition: opacity 0.3s ease;
+}
+
+.producto1:hover::after {
+    opacity: 0.15; /* Se enciende el fondo divertido texturizado */
+    animation: particulasFluyendo 4s infinite linear;
+}
+
+
+/* --- LÓGICA DE ANIMACIONES (KEYFRAMES) --- */
+
+/* 1. Flotación rítmica sutil para simular dinamismo alegre */
+@keyframes flotacionDivertida {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 5px 15px rgba(239, 5, 74, 0.1);
     }
-    .info p{
-        width: 90%;
-        font-size: 1rem;
+    50% {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(239, 5, 74, 0.3),
+                    inset 0 0 10px rgba(239, 5, 74, 0.1);
+        border-color: rgba(239, 5, 74, 0.4);
     }
 }
 
-@media (max-width: 700px){
-    .hotdogs{
-        width: 40%;
+/* 2. Barrido de luz veloz */
+@keyframes barridoLuz {
+    0% { left: -100%; }
+    25%, 100% { left: 180%; } /* Pasa rápido y se queda en pausa */
+}
+
+/* 3. Flujo constante de las partículas de fondo */
+@keyframes particulasFluyendo {
+    0% {
+        background-position: 0 0, 20px 30px, 15px 15px;
     }
-    .info h1{
-        font-size: 1.5rem;
-    }
-    .info p{
-        width: 90%;
-        font-size: 0.7rem;
-    }
-    .info h2{
-        font-size: 1.2rem;
-    }
-    .info h2 span{
-        font-size: 0.7rem;
+    100% {
+        background-position: 40px -40px, 80px -90px, 45px -45px; /* Mueve el patrón hacia arriba diagonalmente */
     }
 }
-@media (max-width:500px){
-    .content-productos, .content-productos2{
+
+
+/* --- CONFIGURACIÓN RESPONSIVA --- */
+
+@media (max-width: 1200px) {
+    .info h1 { font-size: 2.6rem; }
+    .info p { width: 90%; font-size: 1rem; }
+}
+
+@media (max-width: 700px) {
+    .hotdogs { width: 40%; }
+    .info h1 { font-size: 1.5rem; }
+    .info p { width: 90%; font-size: 0.7rem; }
+    .info h2 { font-size: 1.2rem; }
+    .info h2 span { font-size: 0.7rem; }
+
+    /* Apagamos efectos complejos en móviles para mantener suavidad táctil */
+    .producto1::before, .producto1::after {
+        display: none !important;
+    }
+    .producto1:hover img {
+        transform: none !important;
+    }
+    .producto1 {
+        animation: flotacionMovil 4s infinite ease-in-out;
+    }
+    @keyframes flotacionMovil {
+        0%, 100% { transform: translateY(0); box-shadow: 0 0 8px rgba(239, 5, 74, 0.3); }
+        50% { transform: translateY(-4px); box-shadow: 0 0 18px rgba(239, 5, 74, 0.6); }
+    }
+}
+
+@media (max-width: 500px) {
+    .content-productos, .content-productos2 {
         flex-direction: column;
         gap: 20px;
     }
-    .producto1{
-        width: 100%;
-    }
-    .info p{
-        width: 80%;
-    }
+    .producto1 { width: 100%; }
+    .info p { width: 80%; }
 }

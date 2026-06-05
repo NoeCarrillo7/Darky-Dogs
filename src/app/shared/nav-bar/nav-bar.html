@@ -36,7 +36,7 @@
             <span class="left"></span>
         </a>
 
-        <a routerLink="/ordenar" routerLinkActive="active">
+        <a [routerLink]="getOrdenarLink().path" [fragment]="getOrdenarLink().fragment" >
             ORDENAR
             <span class="top"></span>
             <span class="right"></span>
@@ -48,7 +48,7 @@
     <a routerLink="/inicio" (click)="menuOpen=false">INICIO</a>
     <a routerLink="/menu" (click)="menuOpen=false">MENÚ</a>
     <a routerLink="/eventos" (click)="menuOpen=false">EVENTOS</a>
-    <a routerLink="/ordenar" (click)="menuOpen=false">ORDENAR</a>
+    <a [routerLink]="getOrdenarLink().path" [fragment]="getOrdenarLink().fragment" (click)="menuOpen=false" (click)="menuOpen=false">ORDENAR</a>
 </div>
 
 </div>
