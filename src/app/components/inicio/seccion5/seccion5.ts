@@ -4,7 +4,7 @@ import { Component,AfterViewInit } from '@angular/core';
   selector: 'app-seccion5',
   imports: [],
   templateUrl: './seccion5.html',
-  styleUrl: './seccion5.css',
+  styleUrls: ['./seccion5.css'],
 })
 export class Seccion5 {
   abrirUber(): void {
@@ -22,13 +22,12 @@ export class Seccion5 {
         const target = entry.target as HTMLElement;
         if (entry.isIntersecting) {
           target.classList.add('show');
-        } else {
-          target.classList.remove('show');
+          observer.unobserve(target);
         }
       });
     }, {
-      threshold: 0.2,
-      rootMargin: '0px 0px -10% 0px'
+      threshold: 0.15,
+      rootMargin: '0px 0px -20% 0px'
     });
 
     elementos.forEach(elemento => {
