@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ScrollAnimate } from '../../../../shared/directives/scroll-animate';
+import { ScrollAnimate } from '../../../shared/directives/scroll-animate';
 
 @Component({
   selector: 'app-seccion1-menu',

@@ -1,0 +1,13 @@
+@if (isOpen) {
+    <div class="modal-overlay"(click)="cerrar()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="close-btn" (click)="cerrar()">✕</button>
+        
+        <picture>
+            <source media="(max-width: 767px)" srcset="/assets/pop-up/mundial-movil.png">
+            
+            <img src="/assets/pop-up/mundial.png" alt="Promoción Mundial">
+        </picture>
+    </div>
+    </div>
+}

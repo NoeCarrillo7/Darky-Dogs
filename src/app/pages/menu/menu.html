@@ -7,3 +7,8 @@
 <app-seccion4-menu></app-seccion4-menu>
 <app-seccion5-menu id="seccion5-menu"></app-seccion5-menu>
 <app-footer></app-footer>
+
+<app-pop-up
+    [isOpen]="isModalOpen" 
+    (closePopUp)="manejadorCerrarModal()">
+</app-pop-up>
